@@ -13,9 +13,9 @@
                 case 'sanpham':
                     include("./template/content/conTentChange.php");
                     break;
-                // case 'trangchu':
-                //     include("./template/content/conTent.php");
-                //     break;
+                case 'dangnhap':
+                    include("./template/content/login.php");
+                    break;
             }
         } 
         ?>

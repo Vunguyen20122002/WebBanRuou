@@ -17,8 +17,11 @@
     ?>
 <body>
     <?php
-        // include("pageAdmin.php");
-        include("pageProduct.php");
+        include("./template/header/Headerproduct.php");
+        include("./template/header/ListMenuProduct.php");
+        include("./template/header/ListMenuUser.php");
+        include("./template/content/conTent.php");
+        include("./template/footer/fooTer.php");
     ?>
 </body>
 <script src="./js/jsPage.js"></script>
