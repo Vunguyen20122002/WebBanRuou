@@ -12,13 +12,24 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     
 </head>
-<?php
-    // $user = $_GET['user'];
-    ?>
 <body>
     <?php
-        // include("pageAdmin.php");
-        include("pageProduct.php");
+    session_start();
+        if(isset($_GET['user'])){
+            $user = $_GET['user'];
+            if($user==='admin'){
+                include("pageAdmin.php");
+            }
+            else{
+                include("pageProduct.php");
+            }
+        }
+        else{
+            include("pageProduct.php");
+
+        }
+    session_unset();
+    session_destroy();
     ?>
 </body>
 <script src="./js/jsPage.js"></script>

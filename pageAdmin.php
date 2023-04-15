@@ -12,15 +12,12 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     
 </head>
-<?php
-    // $user = $_GET['user'];
-    ?>
 <body>
     <?php
         include("./template/header/Headeradmin.php");
-        include("./template/header/ListMenuProduct.php");
+        include("./template/header/ListMenuAdmin.php");
         include("./template/header/ListMenuUser.php");
-        include("./template/content/conTent.php");
+        include("./template/content/conTentChangeAdmin.php");
         include("./template/footer/fooTer.php");
     ?>
 </body>

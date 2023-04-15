@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 //neu da login
 // if (isset($_SESSION['logged_in'])) {
@@ -256,19 +258,23 @@ if (isset($_POST['login'])) {
                 success: function(response) {
 
                     // $("#result").html(result);
+                    // if (typeof response !== 'string') {
+                    //     response = JSON.stringify(response);
+                    // }
                     console.log(response);
                     if (response.indexOf('admin')>=0) {
                             alert('Day la trang admin');
-                            location.reload();
+                            window.location = 'index.php?user=admin'
                     } else if(response.indexOf('client')>=0) {
                             alert('Dang nhap khach hang thanh cong.');
+                            window.location = 'index.php?user=client';
                     // if (result.indexOf("success") >= 0)
                     //     window.location = 'Personal.php';
                     // console.log(result.indexOf("success"));
                     }
                     else
                         alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
-                    // console.log(result.indexOf("error"));
+                    console.log(response.indexOf("error"));
                 },
             })
 

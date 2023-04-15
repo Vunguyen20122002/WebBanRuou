@@ -1,7 +1,7 @@
 <header class="header_admin">
     <div class="header_index">
-        <div class="menu_amin"> 
-            <img id="menuheader" src="./image/icons8_list_64px.png" alt="" srcset="">
+        <div class="menu_admin"> 
+            <img class="menuadmin" id="menuadmin" src="./image/icons8_list_64px.png" alt="" srcset="">
         </div>
         <div>
             <a href="index.php?chon=t&id=trangchu" class="logo"><img  src="./image/Logo.png" alt="" srcset=""></a> 

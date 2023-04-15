@@ -1,24 +1,39 @@
-<main id="main">
-    <div id="content" class="content">
-        <h2>SHOP RƯỢU</h2>
-        <div class="sub">NOTHING BUT FINE WINES</div>
-        <div class="text">KHO RƯỢU TỰ HÀO LÀ ĐƠN VỊ CUNG CẤP RƯỢU VANG, RƯỢU SAKE NHẬT NHẬP KHẨU CHÍNH          
-            </br>HÃNG VỚI CHÍNH SÁCH CHIẾT KHẤU HẤP DẪN, ĐA DẠNG MẪU MÃ VÀ CHẤT LƯỢNG TỐT NHẤT THỊ 
-            </br>TRƯỜNG</div>
-        <a class="link" href="#">XEM THÊM</a>
-    </div>
-        <?php
+<main id="main">          
+    <?php 
         if(isset($_GET["id"])){
             switch ($_GET["id"]) {
                 case 'sanpham':
-                    include("./template/content/conTentChange.php");
+                    # code...
+                    include('./template/content/conTentChangeClient.php');
                     break;
                 case 'dangnhap':
-                    include("./template/content/login.php");
+                    # code...
+                    include('./template/content/conTentChangeLogin.php');
                     break;
+                case 'trangchu':
+                        # code..   
+                    include('./template/content/contentPage.php');
+                break;          
             }
-        } 
-        ?>
+        }
+        else{
+            include('./template/content/contentPage.php');
+        }
+    ?>
 </main>
+<!-- <script>
+    $('#loginphp').click(function(e){
+        e.preventDefault();
+        $('#main').load("./template/content/conTentChangeLogin.php");
+    })
+    $('#changePageProduct').click(function(e){
+        e.preventDefault();
+        $('#main').load("./template/content/conTentChangeClient.php");
+    })
+    $('.logo').click(function(e){
+        e.preventDefault();
+        $('#main').load("./template/content/conTent.php");
+    })
+</script> -->
 
 
